@@ -1,0 +1,41 @@
+# robots.txt for KB Technical Services
+# https://www.kbtechnical.services
+
+# Allow all crawlers
+User-agent: *
+Allow: /
+
+# Sitemap location
+Sitemap: https://www.kbtechnical.services/sitemap.xml
+
+# Crawl delay (optional, be nice to crawlers)
+Crawl-delay: 1
+
+# Allow important files
+Allow: /assets/
+Allow: /*.css
+Allow: /*.js
+Allow: /*.png
+Allow: /*.jpg
+Allow: /*.svg
+
+# Google specific
+User-agent: Googlebot
+Allow: /
+
+# Bing specific
+User-agent: Bingbot
+Allow: /
+
+# AI crawlers (for LLM training consideration)
+User-agent: GPTBot
+Allow: /
+
+User-agent: Claude-Web
+Allow: /
+
+User-agent: anthropic-ai
+Allow: /
+
+User-agent: CCBot
+Allow: /

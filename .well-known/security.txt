@@ -1,0 +1,10 @@
+# Security Policy for KB Technical Services
+# https://www.kbtechnical.services
+
+Contact: mailto:kyle@kbtechnical.services
+Expires: 2026-12-31T23:59:59.000Z
+Preferred-Languages: en
+
+# If you discover a security vulnerability, please report it responsibly
+# by emailing the contact above. We appreciate your help in keeping
+# our website and visitors safe.

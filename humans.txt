@@ -1,0 +1,21 @@
+/* TEAM */
+
+Owner & IT Specialist: Kyle Boutin
+Location: West Monroe, Louisiana
+Contact: kyle@kbtechnical.services
+Education: Louisiana Tech University, Computer Science (2018)
+
+/* SITE */
+
+Last update: 2025/01/18
+Language: English
+Doctype: HTML5
+Standards: HTML5, CSS3, JavaScript ES6+
+Components: Responsive Design, CSS Animations, Accessibility (WCAG 2.1)
+Software: Hand-coded with care
+
+/* THANKS */
+
+Louisiana Tech University
+The West Monroe community
+All my clients who trust me with their tech
