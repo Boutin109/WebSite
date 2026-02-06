@@ -246,7 +246,7 @@ if (contactForm) {
     }
 
     const formData = new FormData(contactForm);
-    formData.append("access_key", "YOUR_WEB3FORMS_ACCESS_KEY");
+    formData.append("access_key", "cd3a30fc-fc19-4a67-8152-3c602c3e4d46");
 
     submitBtn.textContent = "Sending...";
     submitBtn.disabled = true;
