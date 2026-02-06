@@ -1,5 +1,4 @@
-/* Kyle Boutin Portfolio - Rubik's Cube Theme
-   Modern, dark theme with colorful cube accents
+/* Modern, dark theme with colorful cube accents
    ============================================ */
 
 /* Design Tokens */
@@ -19,6 +18,13 @@
     --cube-green: #22c55e;
     --cube-blue: #3b82f6;
     --cube-white: #f8fafc;
+    /* Light variants for dice cube */
+    --cube-red-light: #fca5a5;
+    --cube-orange-light: #fed7aa;
+    --cube-yellow-light: #fef3c7;
+    --cube-green-light: #bbf7d0;
+    --cube-blue-light: #bfdbfe;
+    --cube-white-light: #fefce8;
     
     /* Primary accent */
     --primary: #3b82f6;
@@ -532,9 +538,9 @@ button {
     height: 200px;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    gap: 4px;
-    padding: 4px;
-    background: #1a1a1a;
+    gap: 5px;
+    padding: 5px;
+    background: #020617;
     border-radius: var(--radius-sm);
 }
 
@@ -547,15 +553,90 @@ button {
 
 .cubie {
     border-radius: 4px;
+    background: var(--cube-white-light);
+    border: 2px solid #020617;
+    box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.45);
     transition: transform var(--transition-fast);
 }
 
-.cube-face.front .cubie { background: var(--cube-red); }
-.cube-face.back .cubie { background: var(--cube-orange); }
-.cube-face.right .cubie { background: var(--cube-blue); }
-.cube-face.left .cubie { background: var(--cube-green); }
-.cube-face.top .cubie { background: var(--cube-white); }
-.cube-face.bottom .cubie { background: var(--cube-yellow); }
+.cubie::before {
+    content: '';
+    position: absolute;
+    top: 6px;
+    left: 6px;
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.75);
+    box-shadow: 0 0 4px rgba(255, 255, 255, 0.6);
+}
+
+/* Scrambled cube-style colors so each face has varied stickers */
+/* Front face */
+.cube-face.front .cubie:nth-child(1),
+.cube-face.front .cubie:nth-child(9) { background: var(--cube-red-light); }
+.cube-face.front .cubie:nth-child(2),
+.cube-face.front .cubie:nth-child(7) { background: var(--cube-orange-light); }
+.cube-face.front .cubie:nth-child(3),
+.cube-face.front .cubie:nth-child(5) { background: var(--cube-yellow-light); }
+.cube-face.front .cubie:nth-child(4),
+.cube-face.front .cubie:nth-child(8) { background: var(--cube-blue-light); }
+.cube-face.front .cubie:nth-child(6) { background: var(--cube-green-light); }
+
+/* Back face */
+.cube-face.back .cubie:nth-child(1),
+.cube-face.back .cubie:nth-child(5) { background: var(--cube-green-light); }
+.cube-face.back .cubie:nth-child(2),
+.cube-face.back .cubie:nth-child(8) { background: var(--cube-yellow-light); }
+.cube-face.back .cubie:nth-child(3),
+.cube-face.back .cubie:nth-child(7) { background: var(--cube-blue-light); }
+.cube-face.back .cubie:nth-child(4),
+.cube-face.back .cubie:nth-child(9) { background: var(--cube-red-light); }
+.cube-face.back .cubie:nth-child(6) { background: var(--cube-orange-light); }
+
+/* Right face */
+.cube-face.right .cubie:nth-child(1),
+.cube-face.right .cubie:nth-child(6) { background: var(--cube-blue-light); }
+.cube-face.right .cubie:nth-child(2),
+.cube-face.right .cubie:nth-child(4) { background: var(--cube-red-light); }
+.cube-face.right .cubie:nth-child(3),
+.cube-face.right .cubie:nth-child(8) { background: var(--cube-white-light); }
+.cube-face.right .cubie:nth-child(5),
+.cube-face.right .cubie:nth-child(9) { background: var(--cube-yellow-light); }
+.cube-face.right .cubie:nth-child(7) { background: var(--cube-green-light); }
+
+/* Left face */
+.cube-face.left .cubie:nth-child(1),
+.cube-face.left .cubie:nth-child(5) { background: var(--cube-orange-light); }
+.cube-face.left .cubie:nth-child(2),
+.cube-face.left .cubie:nth-child(9) { background: var(--cube-green-light); }
+.cube-face.left .cubie:nth-child(3),
+.cube-face.left .cubie:nth-child(7) { background: var(--cube-yellow-light); }
+.cube-face.left .cubie:nth-child(4),
+.cube-face.left .cubie:nth-child(8) { background: var(--cube-blue-light); }
+.cube-face.left .cubie:nth-child(6) { background: var(--cube-white-light); }
+
+/* Top face */
+.cube-face.top .cubie:nth-child(1),
+.cube-face.top .cubie:nth-child(8) { background: var(--cube-white-light); }
+.cube-face.top .cubie:nth-child(2),
+.cube-face.top .cubie:nth-child(6) { background: var(--cube-blue-light); }
+.cube-face.top .cubie:nth-child(3),
+.cube-face.top .cubie:nth-child(5) { background: var(--cube-orange-light); }
+.cube-face.top .cubie:nth-child(4),
+.cube-face.top .cubie:nth-child(9) { background: var(--cube-red-light); }
+.cube-face.top .cubie:nth-child(7) { background: var(--cube-green-light); }
+
+/* Bottom face */
+.cube-face.bottom .cubie:nth-child(1),
+.cube-face.bottom .cubie:nth-child(7) { background: var(--cube-yellow-light); }
+.cube-face.bottom .cubie:nth-child(2),
+.cube-face.bottom .cubie:nth-child(9) { background: var(--cube-green-light); }
+.cube-face.bottom .cubie:nth-child(3),
+.cube-face.bottom .cubie:nth-child(5) { background: var(--cube-blue-light); }
+.cube-face.bottom .cubie:nth-child(4),
+.cube-face.bottom .cubie:nth-child(8) { background: var(--cube-white-light); }
+.cube-face.bottom .cubie:nth-child(6) { background: var(--cube-orange-light); }
 
 /* Scroll Indicator */
 .scroll-indicator {
